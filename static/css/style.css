@@ -1,0 +1,169 @@
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #1f2328;
+  --muted: #59636e;
+  --line: #d8dee4;
+  --link: #0969da;
+  --link-hover: #0550ae;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-serif, Georgia, "Times New Roman", "Noto Serif SC", serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 28px 0 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-title {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 14px;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-main {
+  padding: 48px 0 64px;
+}
+
+.intro {
+  margin-bottom: 44px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 3rem;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 1.35rem;
+}
+
+.page-header {
+  margin-bottom: 34px;
+}
+
+.post-list {
+  display: grid;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+time {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.post-list p,
+.intro p,
+.page-header p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.article-header {
+  margin-bottom: 34px;
+}
+
+.content p,
+.content ul,
+.content ol,
+.content blockquote,
+.content pre {
+  margin: 0 0 1.2em;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+}
+
+.content pre {
+  overflow-x: auto;
+  padding: 16px;
+  border: 1px solid var(--line);
+}
+
+.site-footer {
+  padding: 22px 0 32px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
